@@ -5,6 +5,6 @@
     <title>Document</title>
 </head>
 <body>
- 
+ <h1>name id is {{$id}}</h1>
 </body>
 </html>

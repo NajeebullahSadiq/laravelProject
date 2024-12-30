@@ -7,11 +7,6 @@ Route::get('/', function () {
     return view('welcome', ["greating" => "This will the value pass the the p tag"]);
 });
 
-// Route for /home/{id} (dynamic route with id)
-Route::get('/home/{id}', function ($id) {
-    return view('show', ["id" => $id]);
-});
-
 // Route for /home (static route for displaying names and skills)
 Route::get('/home', function () {
     $namesOf = [
@@ -19,5 +14,11 @@ Route::get('/home', function () {
         ["name" => "Nasratullah", "skills" => 55, "id" => "2"],
     ];
 
-    return view('najeeb', ["namesOfThe" => $namesOf]);
+    return view('najeeb', ["namesOf" => $namesOf]);
 });
+
+// Route for /home/{id} (dynamic route with id)
+Route::get('/home/{id}', function ($id) {
+    return view('show', ["id" => $id]);
+});
+
