@@ -5,6 +5,7 @@
     <title>Najib app</title>
 </head>
 <body>
+    <p>{{$greating}}</p>
     <h1 class="header">This will be the header</h1>
     <a href="/home">The Home page</a>
 </body>
