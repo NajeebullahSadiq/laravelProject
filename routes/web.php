@@ -14,7 +14,12 @@ Route::get('/home', function () {
         ["name" => "Nasratullah", "skills" => 55, "id" => "2"],
     ];
 
-    return view('najeeb', ["namesOf" => $namesOf]);
+    return view('index', ["namesOf" => $namesOf]);
+});
+
+// Route for creating tasks
+Route::get('/create', function () {
+    return view('create');
 });
 
 // Route for /home/{id} (dynamic route with id)
