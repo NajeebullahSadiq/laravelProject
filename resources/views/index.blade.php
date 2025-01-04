@@ -1,7 +1,7 @@
 <x-layout>
     <h2>Currently Available Ninjas</h2>
     <ul>
-        @foreach ($namesOf as $namesAndIds)
+        @foreach ($tasks as $namesAndIds)
 
             <li>
                 <x-card :href="'/home/' . $namesAndIds['id']" highlights="$namesAndIds['skill'] > 50">
