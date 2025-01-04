@@ -10,13 +10,14 @@ return new class extends Migration {
      */
     public function up(): void
     {
-        Schema::create('tasks', function (Blueprint $table) {
+        Schema::create('Tasks', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
             $table->string('name');
-            $table->integer('skill');
-            $table->text('bio');
+            $table->integer('skills');
+            $table->text('bio')->nullable();
+            $table->timestamps();
         });
+        
     }
 
     /**
@@ -24,6 +25,6 @@ return new class extends Migration {
      */
     public function down(): void
     {
-        Schema::dropIfExists('tasks');
+        Schema::dropIfExists('Tasks');
     }
 };

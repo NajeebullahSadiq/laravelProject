@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use Faker\Guesser\Name;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -18,6 +19,9 @@ class TasksFactory extends Factory
     {
         return [
             //
+            'name' => fake()->name(),
+            'skills' => fake()->numberBetween(0, 100),
+            'bio' => fake()->realText(500)
         ];
     }
 }
